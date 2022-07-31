@@ -7,10 +7,10 @@ package naves;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author User
- */
+/** @since  29/07/2022
+* @author Alejandro Salazar Rendón
+* @version 1.0 */
+
 public class NoTP extends tipoDeNave{
     private int numeroMotores;
     public NoTP(String nombre, int edad,int numeroMotores) {
@@ -18,14 +18,7 @@ public class NoTP extends tipoDeNave{
         this.numeroMotores = numeroMotores;
     }
 
-    public int getNumeroMotores() {
-        return numeroMotores;
-    }
-
-    public void setNumeroMotores(int numeroMotores) {
-        this.numeroMotores = numeroMotores;
-    }
-    
+   // A method that asks the user to choose a type of ship.
     public void tipos(){
         int num2;
         System.out.println("Que tipo de nave lanzadera?");

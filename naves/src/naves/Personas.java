@@ -7,24 +7,27 @@ package naves;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author User
- */
+/** @since  29/07/2022
+* @author Alejandro Salazar Rendón
+* @version 1.0 */
+
 public class Personas extends NaveET{
     
     private int numTripulantes;
     
+    // A constructor.
     public Personas(String nombre, int edad,int numTripulantes) {
         super(nombre, edad, numTripulantes);
         this.numTripulantes = numTripulantes;
     }
     
+    // Overriding the method mensaje() from the interface Tripulante.
     @Override
     public void mensaje(){
         System.out.println("Heredando tripulantes personas");
     }
     
+    // A method that is overriding the method in the superclass.// A method that is overriding the method in the superclass.
     @Override
      public void tipos(){
         int tipo;

@@ -1,16 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package naves;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author User
- */
+/** @since  29/07/2022
+* @author Alejandro Salazar Rendón
+* @version 1.0 */
+
 public class tiposDeNaves {
     String nombre;
     int    edad;
@@ -19,39 +14,13 @@ public class tiposDeNaves {
     private String nomNave;
     private int edadNave;
     
-
+    // A constructor.
     public tiposDeNaves(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
         //this.estatura = estatura;
     }
-
-    
-    
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public double getEstatura() {
-        return estatura;
-    }
-
-    public void setEstatura(double estatura) {
-        this.estatura = estatura;
-    }
-    
+   
     //creamos al metodo abstracto
     public void verDatos(){
         System.out.println("El nombre es : "+nombre);
@@ -59,6 +28,7 @@ public class tiposDeNaves {
         System.out.println("la estatura es : "+ estatura);
     }   
     
+    //method that creates a "Nave"
     public void crearNave(){
          
         System.out.println("");System.out.println("1. Nave lanzadora 2.Nave no tripulada 3. Nave tripulada");
@@ -68,12 +38,7 @@ public class tiposDeNaves {
              
         }
         else if(num1 == 2){
-            System.out.println("Creando nave no tripuladas");
-           // nomNave = (JOptionPane.showInputDialog("Digite el nombre de la nave: "));
-             //   System.out.println("El nombre es : " + nomNave);
-           // edadNave = Integer.parseInt(JOptionPane.showInputDialog("Digite la edad de la nave: "));
-             // System.out.println("La edad de la nave es : " + edadNave + "años");
-                
+            System.out.println("Creando nave no tripuladas");       
         }
         else if (num1 == 3){
             System.out.println("Creando naves tripuladas");
@@ -83,10 +48,9 @@ public class tiposDeNaves {
                 System.out.println("El nombre es : " + nomNave);
               edadNave = Integer.parseInt(JOptionPane.showInputDialog("Digite la edad de la nave: "));
                 System.out.println("La edad de la nave es : " + edadNave + "años");
-             // estatura = Integer.parseInt(JOptionPane.showInputDialog("Digite la estatura de la nave: "));
-             //   System.out.println("La estatura de la nave es : " + estatura + "años");
-    }
+           }
     
+    // A method that prints the word "abstraccion"
     public void mensaje (){
         System.out.println("abstraccion");
     }

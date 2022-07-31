@@ -13,22 +13,39 @@ public class Naves {
        //construir un objeto
     public static void main(String[] args) throws InterruptedException {
         
-        naves.Naves.llamar();
+        naves.Naves.Menu();       
+    }
+    
+    /**
+    * The function Menu() is a function that creates a menu for the user to interact with the program
+    */
+    public static void Menu(){
+        int i = 0;
+        int newNave=0;
+        int contnaves = 0;
+           while(i!= 1){
+               naves.Naves.llamar();
+               System.out.println(" ");
+               System.out.println("1. Crear una nueva nave  2. cerrar el programa");
+               newNave = Integer.parseInt(JOptionPane.showInputDialog("1. Crear una nueva nave  2. cerrar el programa"));
+               contnaves= contnaves + 1;
+               if(newNave == 1){
+                   System.out.println("...Creando nueva nave...");
+                   System.out.println("Numero de naves creadas : " + contnaves);
+               }else if (newNave == 2){
+                   System.out.println("Numero de naves creadas : "+ contnaves);
+                   System.out.println("Gracias por usar nuestros servicios");
+                   i=1;
+               }
+           }
         
-        //Naves1.verDatos();
         
-       
-       // naveLanzadora naveLanz1 = new naveLanzadora ("Jorge",22,1.7);
-       //naveLanz1.verDatos();
-       //naveLanz1.crearNave();
-       //NaveET Naves3 = new NaveET ("Marte3",23,2);
-       //Naves3.mensaje();
-       
-       
-       
     }
    
-    
+    /**
+     * It asks the user to input a number, and then it calls a function from another class based on the
+     * number the user inputs
+     */
     public static void llamar(){
           int num1 ;
           int num2 ;
@@ -48,10 +65,14 @@ public class Naves {
         
     }
     
+    /**
+    * The function seleccionarLanzadera() creates a new object of the class naveLanzadora, and then
+    * calls the method tipos() of the class naveLanzadora
+    */
     public static void seleccionarLanzadera(int num){
         int num2;
         System.out.println("Creando nave lanzadora");
-            naveLanzadora naveLanz1 = new naveLanzadora ("Lanzadera",11,1.1);
+            naveLanzadora naveLanz1 = new naveLanzadora ("Skylab",11,1.1);
             
             System.out.println("");
            if(num == 1){ 
@@ -59,10 +80,14 @@ public class Naves {
            }
     }
     
+    /**
+    * The function seleccionarNTP() is called from the main function, and it creates a new object of
+    * the class NoTP, and then calls the method tipos() from the class NoTP
+    */
     public static void seleccionarNTP(int num){
         int num2;
         System.out.println("Creando nave No tripulada");
-            NoTP naveNoTP = new NoTP ("Nava NTP",200,3);
+            NoTP naveNoTP = new NoTP ("Salyut",200,3);
             
             System.out.println("");
            if(num == 2){ 
@@ -70,7 +95,10 @@ public class Naves {
               }      
     }
     
-    
+    /**
+     * It's a function that creates a spaceship, and asks the user if he wants to create a spaceship
+     * with people or animals
+     */
     public static void seleccionarET(int num){
         int tipo;
         int num2;
@@ -90,19 +118,28 @@ public class Naves {
         }     
     }
     
+    /**
+    * The function llamarPersonas() takes an integer as an argument and returns methos tipos()
+    *
+    */
+    
     public static void llamarPersonas(int  num){
         
         //System.out.println("Creando nave tripulada por personas...");
-        Personas personas1 =  new Personas ("Raul",444,5);
+        Personas personas1 =  new Personas ("SpaceShipOne",444,5);
         
             personas1.tipos();   
             
            
     }
     
+    /**
+    * The function llamarAnimales() takes an integer as an argument and returns methos tipos()
+    *
+    */
     public static void llamarAnimales(int  num){
         
-        Animales animales1 =  new Animales ("Jorge",555,6);
+        Animales animales1 =  new Animales ("X-15",555,6);
        
             animales1.tipos();     
            

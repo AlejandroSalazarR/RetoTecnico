@@ -13,44 +13,13 @@ public class naveLanzadora extends tipoDeNave{
     private String nomNave;
     private int edadNave;
     
+    //A constructor
     public naveLanzadora(String nombre,int edad,double estatura){
       super(nombre,edad);  
       this.estatura = estatura;
     }
 
-    public double getEstatura() {
-        return estatura;
-    }
-
-    public void setEstatura(double estatura) {
-        this.estatura = estatura;
-    }
-
-    public int getNum1() {
-        return num1;
-    }
-
-    public void setNum1(int num1) {
-        this.num1 = num1;
-    }
-
-    public String getNomNave() {
-        return nomNave;
-    }
-
-    public void setNomNave(String nomNave) {
-        this.nomNave = nomNave;
-    }
-
-    public int getEdadNave() {
-        return edadNave;
-    }
-
-    public void setEdadNave(int edadNave) {
-        this.edadNave = edadNave;
-    }
-     
-    
+     // A method that is overriding the method in the superclass.   
     @Override
     public void tipos(){
         int num2;
@@ -69,6 +38,7 @@ public class naveLanzadora extends tipoDeNave{
         }
     }
     
+    // Overriding the method verDatos() from the superclass Persona.
     @Override
     public void verDatos(){
         System.out.println("El nombre es : "+nombre);
@@ -76,6 +46,7 @@ public class naveLanzadora extends tipoDeNave{
         System.out.println("la estatura es : "+ estatura);
     }   
     
+    //Method that creates a "Nave"
     public void crearNave(){
          
         System.out.println("");System.out.println("1. Nave lanzadora 2.Nave no tripulada 3. Nave tripulada");
@@ -85,12 +56,7 @@ public class naveLanzadora extends tipoDeNave{
              
         }
         else if(num1 == 2){
-            System.out.println("Creando nave no tripuladas");
-           // nomNave = (JOptionPane.showInputDialog("Digite el nombre de la nave: "));
-             //   System.out.println("El nombre es : " + nomNave);
-           // edadNave = Integer.parseInt(JOptionPane.showInputDialog("Digite la edad de la nave: "));
-             // System.out.println("La edad de la nave es : " + edadNave + "años");
-                
+            System.out.println("Creando nave no tripuladas");  
         }
         else if (num1 == 3){
             System.out.println("Creando naves tripuladas");
@@ -100,8 +66,6 @@ public class naveLanzadora extends tipoDeNave{
                 System.out.println("El nombre es : " + nomNave);
               edadNave = Integer.parseInt(JOptionPane.showInputDialog("Digite la edad de la nave: "));
                 System.out.println("La edad de la nave es : " + edadNave + "años");
-             // estatura = Integer.parseInt(JOptionPane.showInputDialog("Digite la estatura de la nave: "));
-             //   System.out.println("La estatura de la nave es : " + estatura + "años");
     }
     
 }

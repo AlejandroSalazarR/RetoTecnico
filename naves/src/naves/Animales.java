@@ -7,10 +7,10 @@ package naves;
 
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author User
- */
+/** @since  29/07/2022
+* @author Alejandro Salazar Rendón
+* @version 1.0 */
+
 public class Animales extends NaveET{
     
     private int numTripulantes;
@@ -21,11 +21,13 @@ public class Animales extends NaveET{
         
     } 
     
+    // A method that is overriding the method mensaje() from the interface Tripulantes.
     @Override
     public void mensaje(){
         System.out.println("Heredando tripulantes Animales");
     }
     
+    // A method that is overriding the method `tipos()` from the parent class.
     @Override
     public void tipos(){
         int tipo;

@@ -12,38 +12,14 @@ public  class tipoDeNave {
     private String nomNave;
     private int edadNave;
     
-
+    // A constructor.
     public tipoDeNave(String nombre, int edad) {
         this.nombre = nombre;
         this.edad = edad;
-        //this.estatura = estatura;
     }
 
     
-    
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public double getEstatura() {
-        return estatura;
-    }
-
-    public void setEstatura(double estatura) {
-        this.estatura = estatura;
-    }
+ 
     
     //creamos al metodo abstracto
     public void verDatos(){
@@ -63,12 +39,7 @@ public  class tipoDeNave {
              
         }
         else if(num1 == 2){
-            System.out.println("Creando nave no tripuladas");
-           // nomNave = (JOptionPane.showInputDialog("Digite el nombre de la nave: "));
-             //   System.out.println("El nombre es : " + nomNave);
-           // edadNave = Integer.parseInt(JOptionPane.showInputDialog("Digite la edad de la nave: "));
-             // System.out.println("La edad de la nave es : " + edadNave + "años");
-                
+            System.out.println("Creando nave no tripuladas");      
         }
         else if (num1 == 3){
             System.out.println("Creando naves tripuladas");
@@ -78,14 +49,14 @@ public  class tipoDeNave {
                 System.out.println("El nombre es : " + nomNave);
               edadNave = Integer.parseInt(JOptionPane.showInputDialog("Digite la edad de la nave: "));
                 System.out.println("La edad de la nave es : " + edadNave + "años");
-             // estatura = Integer.parseInt(JOptionPane.showInputDialog("Digite la estatura de la nave: "));
-             //   System.out.println("La estatura de la nave es : " + estatura + "años");
     }
     
+    // A method that prints the word "abstraccion"
     public void mensaje (){
         System.out.println("abstraccion");
     }
     
+    // A method that prints out the options for the user to choose from.
     public void tipos(){
         System.out.println("1. Satelites 2.En orbita 3.fuera de orbita 4.fuera de orbita");
     }
